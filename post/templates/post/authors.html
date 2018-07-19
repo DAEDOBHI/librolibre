@@ -1,0 +1,10 @@
+{% extends 'demo/base.html'%}
+
+{% block content %}
+    <h2>bienvenido a libro libre</h2>
+    <p>estos son los  disponibles</p>
+    {% for author in authors %}
+        {{author.name}}
+
+    {% endfor%}
+{% endblock%}

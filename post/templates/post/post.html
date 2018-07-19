@@ -1,0 +1,9 @@
+{% extends 'demo/base.html'%}
+
+{% block content %}
+    <h2>[{{post.title}}]</h2>
+    <p>{{post.content}}</p>
+    <h2>-author</h2>
+    {{post.authors.name}}
+    {{post.authors.country.name}}
+{% endblock%}

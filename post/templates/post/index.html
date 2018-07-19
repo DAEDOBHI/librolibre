@@ -1,0 +1,12 @@
+{% extends 'demo/base.html'%}
+
+{% block content %}
+    <h2>bienvenido a libro libre</h2>
+    <p>estos son los  disponibles</p>
+    {% for book in books %}
+        <li><a href="/demo/post/author/{{ author.id}}" >{{book.title}}</a>
+            <a href="/demo/post/book/{{ book.id}}"></a>
+        </li>
+
+    {% endfor%}
+{% endblock%}
