@@ -3,11 +3,11 @@
 {% block content %}
     <h2>bienvenido a libro libre_3</h2>
     <p>Pais</p>
-        <li><a href="/demo/post/country/{{ country.id}}" >{{ country.name }}</a></li>
+        <li><a href="{% url 'post:country' country.id %}" >{{ country.name }}</a></li>
         <li>Authors</li>
             {% for author in authors %}
                 <li>    
-                    <a href="/demo/post/author/{{ author.id }}"> {{ author.name }}</a>
+                    <a href="{% url 'post:author' author.id %}"> {{ author.name }}</a>
                 </li> 
             {% endfor %}
 {% endblock%}

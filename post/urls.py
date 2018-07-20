@@ -16,11 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from .views import * 
-
+app_name = 'post'
 urlpatterns = [
-    url(r'^post$', post ),
-    url(r'^authors/(?P<id>[0-9]+)$', author),
-    url(r'book/(?P<id>[0-9]+)$',book),
-    url(r'author/(?P<id>[0-9]+)$',author_detail),
-    url(r'country/(?P<id>[0-9]+)',country_detail),
+    url(r'^post$', post,name='post' ),
+    url(r'^authors/(?P<id>[0-9]+)$', authors,name='authors'),
+    url(r'book/(?P<id>[0-9]+)$',book,name='book'),
+    url(r'author/(?P<id>[0-9]+)$',author_detail,name='author'),
+    url(r'country/(?P<id>[0-9]+)',country_detail,name='country'),
 ]
